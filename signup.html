@@ -2,34 +2,30 @@
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.9.0/css/all.min.css">
 
 <head>
-    <div class="flex justify-between items-center py-4 bg-blue-900">
-        <div class="flex-shrink-0 ml-10 cursor-pointer">
-            <i class="fas fa-plane-departure text-orange-500"> </i>
-            <span class="ml-1 text-3xl text-blue-200 font-semibold">Boba Flights</span>
+    <nav class="bg-grey px-8 pt-2 shadow-md justify-between">
+        <div class="flex items-center flex-shrink-0 text-grey-dark  mr-6">
+            <!-- <svg class="text-teal-dark h-8 w-8 mr-2" width="54" height="54" viewBox="0 0 54 54" xmlns="http://www.w3.org/2000/svg"><path d="M13.5 22.1c1.8-7.2 6.3-10.8 13.5-10.8 10.8 0 12.15 8.1 17.55 9.45 3.6.9 6.75-.45 9.45-4.05-1.8 7.2-6.3 10.8-13.5 10.8-10.8 0-12.15-8.1-17.55-9.45-3.6-.9-6.75.45-9.45 4.05zM0 38.3c1.8-7.2 6.3-10.8 13.5-10.8 10.8 0 12.15 8.1 17.55 9.45 3.6.9 6.75-.45 9.45-4.05-1.8 7.2-6.3 10.8-13.5 10.8-10.8 0-12.15-8.1-17.55-9.45-3.6-.9-6.75.45-9.45 4.05z"/></svg> -->
+            <span style="font-size: 3em; color: Tomato;">
+                <i class="fas fa-plane"></i>
+            </span>
+            
+            <span class="font-semibold text-xl px-3 py-3">Boba Flights</span>
+          </div>
+        <div class="-mb-px flex justify-center">
+            <a class="no-underline text-grey-dark border-b-2 border-transparent uppercase tracking-wide font-bold text-xs py-3 mr-8" href="index.html">
+                Home
+            </a>
+            <a class="no-underline text-grey-dark border-b-2 border-transparent uppercase tracking-wide font-bold text-xs py-3 mr-8" href="#">
+                Products
+            </a>
+            <a class="no-underline text-grey-dark border-b-2 border-transparent uppercase tracking-wide font-bold text-xs py-3 mr-8" href="#">
+                Discounts
+            </a>
+            <a class="no-underline text-teal-dark  border-b-2 border-teal-dark uppercase tracking-wide font-bold text-xs py-3" href="signup.html">
+                Sign Up
+            </a>
         </div>
-        <i class="fas fa-plane-departure"></i>
-        <ul class="hidden md:flex overflow-x-hidden mr-10 font-semibold">
-            <li class="mr-6 p-1">
-                <a class="text-white hover:text-blue-300" href="index.html">Home</a>
-            </li>
-            <li class="mr-6 p-1 border-b-2 border-orange-500">
-                <!-- <a class="text-white hover:text-blue-300" href="signup.html">Sign Up</a> -->
-                <a class="text-blue-200 cursor-default" href="signup.html">Sign Up</a>
-            </li>
-            <li class="mr-6 p-1">
-                <a class="text-white hover:text-blue-300" href="#">Projects</a>
-            </li>
-            <li class="mr-6 p-1">
-                <a class="text-white hover:text-blue-300" href="#">Team</a>
-            </li>
-            <li class="mr-6 p-1">
-                <a class="text-white hover:text-blue-300" href="#">About</a>
-            </li>
-            <li class="mr-6 p-1">
-                <a class="text-white hover:text-blue-300" href="#">Contacts</a>
-            </li>
-        </ul>
-    </div>
+   </nav>
 
 
 
@@ -38,56 +34,18 @@
 </head>
 
 <body>
-    
-    <div class="bg-grey-lighter min-h-screen flex flex-col">
-        <div class="container max-w-sm mx-auto flex-1 flex flex-col items-center justify-center px-2">
-            <div class="bg-white px-6 py-8 rounded shadow-md text-black w-full">
-                <h1 class="mb-8 text-3xl text-center">Sign up</h1>
-                <input 
-                    type="text"
-                    class="block border border-grey-light w-full p-3 rounded mb-4"
-                    name="fullname"
-                    placeholder="Full Name" />
+    <div class="py-20" style="background: linear-gradient(90deg, #667eea 0%, #764ba2 100%)">
+        <div class="container mx-auto px-6">
+            <h2 class="text-4xl font-bold mb-2 text-white">
+                Find Flights that Work for You!
+            </h2>
+            <h3 class="text-2xl mb-8 text-gray-200">
+                Set your preferred location and get deals delivered just for YOU!
+            </h3>
 
-                <input 
-                    type="text"
-                    class="block border border-grey-light w-full p-3 rounded mb-4"
-                    name="email"
-                    placeholder="Email" />
-
-                <input 
-                    type="password"
-                    class="block border border-grey-light w-full p-3 rounded mb-4"
-                    name="password"
-                    placeholder="Password" />
-                <input 
-                    type="password"
-                    class="block border border-grey-light w-full p-3 rounded mb-4"
-                    name="confirm_password"
-                    placeholder="Confirm Password" />
-
-                <button
-                    type="submit"
-                    class="w-full text-center py-3 rounded bg-green text-white hover:bg-green-dark focus:outline-none my-1"
-                >Create Account</button>
-
-                <div class="text-center text-sm text-grey-dark mt-4">
-                    By signing up, you agree to the 
-                    <a class="no-underline border-b border-grey-dark text-grey-dark" href="#">
-                        Terms of Service
-                    </a> and 
-                    <a class="no-underline border-b border-grey-dark text-grey-dark" href="#">
-                        Privacy Policy
-                    </a>
-                </div>
-            </div>
-
-            <div class="text-grey-dark mt-6">
-                Already have an account? 
-                <a class="no-underline border-b border-blue text-blue" href="../login/">
-                    Log in
-                </a>.
-            </div>
+            <button class="bg-white font-bold rounded-full py-4 px-8 shadow-lg uppercase tracking-wider">
+                Sign Up Today!
+            </button>
         </div>
     </div>
 
