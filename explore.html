@@ -1,7 +1,8 @@
 <link rel="stylesheet" type="text/css" href="output.css">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.9.0/css/all.min.css">
 <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
-<script defer src="./vue-test.js"></script>
+<script defer src="./main.js"></script>
+
 
 <head>
     <nav class="bg-grey px-8 pt-2 shadow-md justify-between">
@@ -36,7 +37,7 @@
 </head>
 
 <body>
-    <div class="py-20" style="background: linear-gradient(45deg, #667eea 0%, #764ba2 100%)">
+    <div class="py-20 shadow-2xl" style="background: linear-gradient(45deg, #667eea 0%, #764ba2 100%)">
         <div class="container mx-auto px-6">
             <h2 class="text-4xl font-bold mb-2 text-white">
                 Test Our BETA Tool
@@ -49,7 +50,23 @@
         </div>
         <div id="app-5">
             <p class="p-3 text-gray-400">{{ message }}</p>
+            <button v-on:click="reverseMessage" class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded-full">
+                Reverse Message
+              </button>
           </div>
+    </div>
+
+    <div class="py-20  bg-blue-200">
+        <div class="container mx-auto px-6">
+            <h2 class="text-4xl font-bold mb-2 text-black">
+                Explore Flights:
+            </h2>
+            <div id="app"></div>
+
+        </div>   
+
+        
+    
     </div>
 
 
