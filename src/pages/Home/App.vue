@@ -16,7 +16,7 @@
           <i class="fa fa-plane" aria-hidden="true"></i>
         </span>
 
-        <span class="font-semibold text-xl px-3 py-3">Boba Flights</span>
+        <span class="font-semibold text-xl px-3 py-3"> Boba Flights</span>
       </div>
       <div class="-mb-px flex justify-center">
         <a
@@ -45,7 +45,16 @@
       
 
     
+    <div class="bg-fixed py-20" 
+      :style="{ backgroundImage: 'url(' + image + ')' }">
+    <div class="container mx-auto px-6">
+      <h2 class="text-4xl font-bold mb-2 text-black">Find Flights that Work for You!</h2>
+
+    </div>
     
+    
+    
+    </div>
     <!-- <img alt="Vue logo" src="@/assets/logo.png" /> -->
   <div class="py-20" style="background: linear-gradient(90deg, #667eea 0%, #764ba2 100%)">
       <div class="container mx-auto px-6">
@@ -169,6 +178,12 @@
 </template>
 
 <script>
+// var image = L.image({
+//     imageUrl: require('../../assets/img.jpeg'),   // was iconUrl: './assets/img.png',
+// //  iconUrl: require('@/assets/img.png'), // use @ as alternative, depending on the path
+//     // ...
+// });
+
 // import FixedHeader from 'vue-fixed-header'
 export default {
   name: "Home",
@@ -187,11 +202,26 @@ export default {
         "vue-fixed-header" 
       )  
   },
+  data () {
+  return {
+    image: require('@/assets/img.jpeg')
+  }
+},
   
 };
 </script>
 
 <style lang="scss">
+
+.circular{
+  width: 90px;
+  height: 90px;
+  background-size: cover;
+  border-radius: 50px;
+  -webkit-border-radius: 50px;
+  -moz-border-radius: 50px;
+}
+
 #app {
   font-family: "Avenir", Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
