@@ -1,5 +1,5 @@
 <template>
-<div id="app">
+<div id="app" class="columns">
   <head>
     <!-- <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script> -->
     <link
@@ -10,34 +10,44 @@
 
   <body>
     <fixed-header>
-      	<nav class="bg-gray-800 p-4 mt-0 fixed w-full z-10 top-0 bottom-5">
+      <nav class="bg-gray-800 p-4 mt-0 fixed w-full z-10 top-0 bottom-5">
         <div class="container mx-auto flex flex-wrap items-center">
-		      <div class="flex w-full md:w-1/2 justify-center md:justify-start text-white font-extrabold">
-				<a class="text-white no-underline hover:text-white hover:no-underline" href="#">
-					<span class="text-2xl pl-2"><i class="fa fa-plane"></i> Boba Travel</span>
-				</a>
+          <div
+            class="flex w-full md:w-1/2 justify-center md:justify-start text-white font-extrabold"
+          >
+            <a class="text-white no-underline hover:text-white hover:no-underline" href="#">
+              <span class="text-2xl pl-2">
+                <i class="fa fa-plane"></i> Boba Travel
+              </span>
+            </a>
+          </div>
+          <div class="flex w-full p-4content-center justify-between md:w-1/2 md:justify-end">
+            <ul class="list-reset flex justify-between flex-1 md:flex-none items-center">
+              <li class="mr-3">
+                <a class="inline-block py-2 px-4 text-white no-underline" href="index.html">Explore</a>
+              </li>
+              <li class="mr-3">
+                <a
+                  class="inline-block text-gray-600 no-underline hover:text-gray-200 hover:text-underline py-2 px-4"
+                  href="#"
+                >Log In</a>
+              </li>
+              <li class="mr-3">
+                <a
+                  class="inline-block text-gray-600 no-underline hover:text-gray-200 hover:text-underline py-2 px-4"
+                  href="flights.html"
+                >Sign Up</a>
+              </li>
+              <li class="mr-3">
+                <button
+                  class="bg-white font-bold rounded-full py-3 px-3 shadow-lg uppercase tracking-wider"
+                  href="flights.html"
+                >Sign Up Today!</button>
+              </li>
+            </ul>
+          </div>
         </div>
-			<div class="flex w-full p-4content-center justify-between md:w-1/2 md:justify-end">
-				<ul class="list-reset flex justify-between flex-1 md:flex-none items-center">
-				  <li class="mr-3">
-					<a class="inline-block py-2 px-4 text-white no-underline" href="index.html">Explore</a>
-				  </li>
-				  <li class="mr-3">
-					<a class="inline-block text-gray-600 no-underline hover:text-gray-200 hover:text-underline py-2 px-4" href="#">Log In</a>
-				  </li>
-          <li class="mr-3">
-					<a class="inline-block text-gray-600 no-underline hover:text-gray-200 hover:text-underline py-2 px-4" href="flights.html">Sign Up</a>
-				  </li>
-          <li class="mr-3">
-					<button
-          class="bg-white font-bold rounded-full py-3 px-3 shadow-lg uppercase tracking-wider" href="flights.html">
-          Sign Up Today!</button>
-				  </li>
-				  
-				</ul>
-			</div>
-        </div>
-    </nav>
+      </nav>
       <!-- <nav class="bg-grey px-8 pt-2 shadow-md justify-between">
         <div class="flex items-center flex-shrink-0 text-grey-dark mr-6">
           <span style="font-size: 3em; color: Tomato;">
@@ -46,8 +56,8 @@
           </span>
 
           <span class="font-semibold text-xl px-3 py-3">Boba Flights</span>
-        </div> -->
-        <!-- <div class="-mb-px flex justify-center">
+      </div>-->
+      <!-- <div class="-mb-px flex justify-center">
           <a
             class="no-underline text-teal-dark border-b-2 border-teal-dark uppercase tracking-wide font-bold text-xs py-3 mr-8"
             href="index.html"
@@ -65,75 +75,69 @@
             href="signup.html"
           >Sign Up</a>
         </div>
-      </nav> -->
+      </nav>-->
     </fixed-header>
 
     <div class="bg-fixed py-40" :style="{ backgroundImage: 'url(' + image + ')' }">
-      <div class="container mx-auto px-6 py-40">
+      <div class="container mx-auto px-6 py-40"></div>
+      <div class="container mx-auto px-4 py-4 bg-indigo-500 opacity-100">
+        <h2 class="text-4xl font-bold mb-2 text-black opacity-75">Find Flights that Work for You!</h2>
+        <form class="w-full max-w-lg">
+          <div class="flex flex-wrap -mx-3 mb-6">
+            <div class="w-full md:w-1/2 px-3 mb-6 md:mb-0">
+              <label
+                class="block uppercase tracking-wide text-gray-800 text-xs font-bold mb-2"
+                for="grid-flight-origin"
+              >Origin Airport</label>
+              <input
+                class="appearance-none block w-full bg-gray-200 text-gray-800 border border-red-500 rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white"
+                id="grid-first-name"
+                type="text"
+                placeholder="Jane"
+              />
+              <p class="text-red-500 text-xs italic">Please fill out this field.</p>
+            </div>
+            <div class="w-full md:w-1/2 px-3">
+              <label
+                class="block uppercase tracking-wide text-gray-800 text-xs font-bold mb-2"
+                for="grid-flight-destination"
+              >Destination Airport</label>
+              <input
+                class="appearance-none block w-full bg-gray-200 text-gray-800 border border-gray-200 rounded py-3 px-4 leading-tight focus:outline-none focus:bg-white focus:border-gray-500"
+                id="grid-last-name"
+                type="text"
+                placeholder="Doe"
+              />
+            </div>
+          </div>
+          <div class="flex flex-wrap -mx-3 mb-2"></div>
+
+          <label class="block">
+            <span class="text-gray-800">Account Type</span>
+            <div class="mt-2">
+              <label class="inline-flex items-center">
+                <input type="radio" class="form-radio" name="accountType" value="personal" />
+                <span class="ml-2">Personal</span>
+              </label>
+              <label class="inline-flex items-center ml-6">
+                <input type="radio" class="form-radio" name="accountType" value="busines" />
+                <span class="ml-2">Business</span>
+              </label>
+            </div>
+          </label>
+        </form>
+        <div>
+        <FlightCard v-for="tweet in tweets" :tweet="tweet" />
+       
         
       </div>
-      <div class="container mx-auto px-4 py-4 bg-indigo-500 opacity-75">
-        <h2 class="text-4xl font-bold mb-2 text-black opacity-75">Find Flights that Work for You! </h2>
-        <form class="w-full max-w-lg ">
-  <div class="flex flex-wrap -mx-3 mb-6">
-    <div class="w-full md:w-1/2 px-3 mb-6 md:mb-0">
-      <label class="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2" for="grid-first-name">
-        First Name
-      </label>
-      <input class="appearance-none block w-full bg-gray-200 text-gray-700 border border-red-500 rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white" id="grid-first-name" type="text" placeholder="Jane">
-      <p class="text-red-500 text-xs italic">Please fill out this field.</p>
-    </div>
-    <div class="w-full md:w-1/2 px-3">
-      <label class="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2" for="grid-last-name">
-        Last Name
-      </label>
-      <input class="appearance-none block w-full bg-gray-200 text-gray-700 border border-gray-200 rounded py-3 px-4 leading-tight focus:outline-none focus:bg-white focus:border-gray-500" id="grid-last-name" type="text" placeholder="Doe">
-    </div>
-  </div>
-  <div class="flex flex-wrap -mx-3 mb-6">
-    <div class="w-full px-3">
-      <label class="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2" for="grid-password">
-        Password
-      </label>
-      <input class="appearance-none block w-full bg-gray-200 text-gray-700 border border-gray-200 rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white focus:border-gray-500" id="grid-password" type="password" placeholder="******************">
-      <p class="text-gray-600 text-xs italic">Make it as long and as crazy as you'd like</p>
-    </div>
-  </div>
-  <div class="flex flex-wrap -mx-3 mb-2">
-    <div class="w-full md:w-1/3 px-3 mb-6 md:mb-0">
-      <label class="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2" for="grid-city">
-        City
-      </label>
-      <input class="appearance-none block w-full bg-gray-200 text-gray-700 border border-gray-200 rounded py-3 px-4 leading-tight focus:outline-none focus:bg-white focus:border-gray-500" id="grid-city" type="text" placeholder="Albuquerque">
-    </div>
-    <div class="w-full md:w-1/3 px-3 mb-6 md:mb-0">
-      <label class="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2" for="grid-state">
-        State
-      </label>
-      <div class="relative">
-        <select class="block appearance-none w-full bg-gray-200 border border-gray-200 text-gray-700 py-3 px-4 pr-8 rounded leading-tight focus:outline-none focus:bg-white focus:border-gray-500" id="grid-state">
-          <option>New Mexico</option>
-          <option>Missouri</option>
-          <option>Texas</option>
-        </select>
-        <div class="pointer-events-none absolute inset-y-0 right-0 flex items-center px-2 text-gray-700">
-          <svg class="fill-current h-4 w-4" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20"><path d="M9.293 12.95l.707.707L15.657 8l-1.414-1.414L10 10.828 5.757 6.586 4.343 8z"/></svg>
-        </div>
-      </div>
-    </div>
-    <div class="w-full md:w-1/3 px-3 mb-6 md:mb-0">
-      <label class="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2" for="grid-zip">
-        Zip
-      </label>
-      <input class="appearance-none block w-full bg-gray-200 text-gray-700 border border-gray-200 rounded py-3 px-4 leading-tight focus:outline-none focus:bg-white focus:border-gray-500" id="grid-zip" type="text" placeholder="90210">
-    </div>
-  </div>
-</form>
+      
+
         
       </div>
     </div>
     <!-- <img alt="Vue logo" src="@/assets/logo.png" /> -->
-    <div class="py-20" style="background: linear-gradient(90deg, #667eea 0%, #764ba2 100%)">
+    <!-- <div class="py-20" style="background: linear-gradient(90deg, #667eea 0%, #764ba2 100%)">
       <div class="container mx-auto px-6">
         <h2 class="text-4xl font-bold mb-2 text-white">Find Flights that Work for You!</h2>
         <h3
@@ -141,15 +145,13 @@
         >Set your preferred location and get deals delivered just for YOU!</h3>
 
         <button
-          class="bg-white font-bold rounded-full py-4 px-8 shadow-lg uppercase tracking-wider" 
+          class="bg-white font-bold rounded-full py-4 px-8 shadow-lg uppercase tracking-wider"
         >Sign Up Today!</button>
         <div id="app"></div>
       </div>
-    </div>
+    </div>-->
     <div style="position: relative">
-      <div>
-        <HelloWorld msg="Welcome to Your Vue.js App" />
-      </div>
+      
 
       <!-- <div class="short-it">
         <FlightTable msg="Here Are The Flight Deals" />
@@ -287,6 +289,12 @@ export default {
       import(
         /* webpackChunkName: 'hello-world' */ "@/components/FlightTable.vue"
       ),
+
+      FlightCard: () =>
+      import(
+        /* webpackChunkName: 'hello-world' */ "@/components/FlightCard.js"
+      ),
+    
     FixedHeader: () => import("vue-fixed-header")
   },
   data() {
@@ -307,7 +315,7 @@ export default {
   -moz-border-radius: 50px;
 }
 .text-purple-50 {
-  color: color(config('colors.purple') a(50%));
+  color: color(config("colors.purple") a(50%));
 }
 
 #app {
