@@ -157,6 +157,9 @@
       <div>
         <CoinCard msg="Here Are The Flight Deals" />
       </div>
+      <div>
+        <FlightCard msg="Here Are The Flight Deals" />
+      </div>
     
       <!-- <img alt="Vue logo" src="@/assets/logo.png" /> -->
       <!-- <div class="py-20" style="background: linear-gradient(90deg, #667eea 0%, #764ba2 100%)">
@@ -309,6 +312,10 @@ export default {
       CoinCard: () =>
       import(
         /* webpackChunkName: 'hello-world' */ "@/components/CoinCard.vue"
+      ),
+      FlightCard: () =>
+      import(
+        /* webpackChunkName: 'hello-world' */ "@/components/FlightCard.vue"
       )
 
     // FixedHeader: () => 

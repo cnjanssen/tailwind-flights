@@ -19,8 +19,21 @@
                 class="no-underline hover:underline text-black"
                 href="#"
               >
-                Title 1
-
+                <!-- <template v-for="block in info">
+                    <component :is="block.title" :block="block" :key="block._id"></component>
+                </template> -->
+                {{ info[0].to_location }} 
+              </a>
+            </h1>
+            <h1 class="text-lg">
+              <a
+                class="no-underline hover:underline text-black"
+                href="#"
+              >
+                <!-- <template v-for="block in info">
+                    <component :is="block.title" :block="block" :key="block._id"></component>
+                </template> -->
+                {{ info[0].from_location }}} 
               </a>
             </h1>
             <p class="text-grey-darker text-sm" />
@@ -124,7 +137,7 @@
                 class="no-underline hover:underline text-black"
                 href="#"
               >
-                Article Title
+                {Article Title}
               </a>
             </h1>
             <p class="text-grey-darker text-sm">
