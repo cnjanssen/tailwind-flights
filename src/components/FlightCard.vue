@@ -20,7 +20,7 @@
               <!-- <template v-for="block in info">
                     <component :is="block.title" :block="block" :key="block._id"></component>
                 </template> -->
-              {{ info[0].title }} 
+              {{ info.to_location["874"] }} 
             </a>
           </h1>
           <p class="text-grey-darker text-sm">
@@ -74,7 +74,7 @@ export default {
   },
   mounted () {
     axios
-      .get('https://jsonplaceholder.typicode.com/posts')
+      .get('https://raw.githubusercontent.com/cnjanssen/tailwind-flights/master/data/3-5-2020_SFO.json')
       .then(response => {
         this.info = response.data
       })

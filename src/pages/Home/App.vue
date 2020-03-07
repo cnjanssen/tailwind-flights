@@ -9,54 +9,53 @@
     </head>
 
     <body>
-      <fixed-header>
-        <nav class="bg-gray-800 p-4 mt-0 fixed w-full z-10 top-0 bottom-5">
-          <div class="container mx-auto flex flex-wrap items-center">
-            <div
-              class="flex w-full md:w-1/2 justify-center md:justify-start text-white font-extrabold"
+      <nav class="bg-gray-800 p-4 mt-0 fixed w-full z-10 top-0 bottom-5">
+        <div class="container mx-auto flex flex-wrap items-center">
+          <div
+            class="flex w-full md:w-1/2 justify-center md:justify-start text-white font-extrabold"
+          >
+            <a
+              class="text-white no-underline hover:text-white hover:no-underline"
+              href="#"
             >
-              <a
-                class="text-white no-underline hover:text-white hover:no-underline"
-                href="#"
-              >
-                <span class="text-2xl pl-2">
-                  <i class="fa fa-plane" /> Boba Travel
-                </span>
-              </a>
-            </div>
-            <div class="flex w-full p-4content-center justify-between md:w-1/2 md:justify-end">
-              <ul class="list-reset flex justify-between flex-1 md:flex-none items-center">
-                <li class="mr-3">
-                  <a
-                    class="inline-block py-2 px-4 text-white no-underline"
-                    href="index.html"
-                  >Explore</a>
-                </li>
-                <li class="mr-3">
-                  <a
-                    class="inline-block text-gray-600 no-underline hover:text-gray-200 hover:text-underline py-2 px-4"
-                    href="#"
-                  >Log In</a>
-                </li>
-                <li class="mr-3">
-                  <a
-                    class="inline-block text-gray-600 no-underline hover:text-gray-200 hover:text-underline py-2 px-4"
-                    href="flights.html"
-                  >Sign Up</a>
-                </li>
-                <li class="mr-3">
-                  <button
-                    class="bg-white font-bold rounded-full py-3 px-3 shadow-lg uppercase tracking-wider"
-                    href="flights.html"
-                  >
-                    Sign Up Today!
-                  </button>
-                </li>
-              </ul>
-            </div>
+              <span class="text-2xl pl-2">
+                <i class="fa fa-plane" /> Boba Travel
+              </span>
+            </a>
           </div>
-        </nav>
-      </fixed-header>
+          <div class="flex w-full p-4content-center justify-between md:w-1/2 md:justify-end">
+            <ul class="list-reset flex justify-between flex-1 md:flex-none items-center">
+              <li class="mr-3">
+                <a
+                  class="inline-block py-2 px-4 text-white no-underline"
+                  href="index.html"
+                >Explore</a>
+              </li>
+              <li class="mr-3">
+                <a
+                  class="inline-block text-gray-600 no-underline hover:text-gray-200 hover:text-underline py-2 px-4"
+                  href="#"
+                >Log In</a>
+              </li>
+              <li class="mr-3">
+                <a
+                  class="inline-block text-gray-600 no-underline hover:text-gray-200 hover:text-underline py-2 px-4"
+                  href="flights.html"
+                >Sign Up</a>
+              </li>
+              <li class="mr-3">
+                <button
+                  class="bg-white font-bold rounded-full py-3 px-3 shadow-lg uppercase tracking-wider"
+                  href="flights.html"
+                >
+                  Sign Up Today!
+                </button>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+      
       <!-- <nav class="bg-grey px-8 pt-2 shadow-md justify-between">
         <div class="flex items-center flex-shrink-0 text-grey-dark mr-6">
           <span style="font-size: 3em; color: Tomato;">
@@ -155,11 +154,9 @@
         </div>
       </div>
       <div>
-        <CoinCard msg="Here Are The Flight Deals" />
+        <UITable msg="Here Are The Flight Deals" />
       </div>
-      <div>
-        <FlightCard msg="Here Are The Flight Deals" />
-      </div>
+      
     
       <!-- <img alt="Vue logo" src="@/assets/logo.png" /> -->
       <!-- <div class="py-20" style="background: linear-gradient(90deg, #667eea 0%, #764ba2 100%)">
@@ -309,14 +306,14 @@ export default {
   
 
 
-      CoinCard: () =>
+      UITable: () =>
       import(
-        /* webpackChunkName: 'hello-world' */ "@/components/CoinCard.vue"
-      ),
-      FlightCard: () =>
-      import(
-        /* webpackChunkName: 'hello-world' */ "@/components/FlightCard.vue"
+        /* webpackChunkName: 'hello-world' */ "@/components/UITable.vue"
       )
+      // FlightCard: () =>
+      // import(
+      //   /* webpackChunkName: 'hello-world' */ "@/components/FlightCard.vue"
+      // )
 
     // FixedHeader: () => 
     // import("vue-fixed-header")
@@ -353,12 +350,7 @@ export default {
   color: #2c3e50;
   margin-top: 60px;
 }
-.navbar.vue-fixed-header--isFixed {
-  position: fixed;
-  left: 0;
-  top: 0;
-  width: 100vw;
-}
+
 .short-it {
   position: relative;
 

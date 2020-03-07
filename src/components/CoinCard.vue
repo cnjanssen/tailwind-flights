@@ -351,7 +351,7 @@ export default {
   },
   mounted () {
     axios
-      .get('https://jsonplaceholder.typicode.com/posts')
+      .get('https://raw.githubusercontent.com/cnjanssen/tailwind-flights/master/data/3-5-2020_SFO.json')
       .then(response => {
         this.info = response.data
       })
