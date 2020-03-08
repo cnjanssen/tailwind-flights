@@ -21,8 +21,48 @@
         </thead>
         <tbody>
           <tr class="bg-white">
+            <td class="px-6 py-4 whitespace-no-wrap text-sm leading-5 font-medium text-gray-900 ">
+              {{ info[874] }}
+            </td>
+            <td class="px-6 py-4 whitespace-no-wrap text-sm leading-5 text-gray-500">
+              Director, Human Resources
+            </td>
+            <td class="px-6 py-4 whitespace-no-wrap text-sm leading-5 text-gray-500">
+              bernardlane@example.com
+            </td>
+            <td class="px-6 py-4 whitespace-no-wrap text-sm leading-5 text-gray-500">
+              Owner
+            </td>
+            <td class="px-6 py-4 whitespace-no-wrap text-right text-sm leading-5 font-medium">
+              <a
+                href="#"
+                class="text-indigo-600 hover:text-indigo-900 focus:outline-none focus:underline"
+              >Edit</a>
+            </td>
+          </tr>
+          <!-- <tr class="bg-gray-50">
             <td class="px-6 py-4 whitespace-no-wrap text-sm leading-5 font-medium text-gray-900">
-              v-for="flight in info">@{{ info.to_location }}
+              Bernard Lane
+            </td>
+            <td class="px-6 py-4 whitespace-no-wrap text-sm leading-5 text-gray-500">
+              Director, Human Resources
+            </td>
+            <td class="px-6 py-4 whitespace-no-wrap text-sm leading-5 text-gray-500">
+              bernardlane@example.com
+            </td>
+            <td class="px-6 py-4 whitespace-no-wrap text-sm leading-5 text-gray-500">
+              Owner
+            </td>
+            <td class="px-6 py-4 whitespace-no-wrap text-right text-sm leading-5 font-medium">
+              <a
+                href="#"
+                class="text-indigo-600 hover:text-indigo-900 focus:outline-none focus:underline"
+              >Edit</a>
+            </td>
+          </tr>
+          <tr class="bg-white">
+            <td class="px-6 py-4 whitespace-no-wrap text-sm leading-5 font-medium text-gray-900">
+              Bernard Lane
             </td>
             <td class="px-6 py-4 whitespace-no-wrap text-sm leading-5 text-gray-500">
               Director, Human Resources
@@ -79,47 +119,7 @@
                 class="text-indigo-600 hover:text-indigo-900 focus:outline-none focus:underline"
               >Edit</a>
             </td>
-          </tr>
-          <tr class="bg-gray-50">
-            <td class="px-6 py-4 whitespace-no-wrap text-sm leading-5 font-medium text-gray-900">
-              Bernard Lane
-            </td>
-            <td class="px-6 py-4 whitespace-no-wrap text-sm leading-5 text-gray-500">
-              Director, Human Resources
-            </td>
-            <td class="px-6 py-4 whitespace-no-wrap text-sm leading-5 text-gray-500">
-              bernardlane@example.com
-            </td>
-            <td class="px-6 py-4 whitespace-no-wrap text-sm leading-5 text-gray-500">
-              Owner
-            </td>
-            <td class="px-6 py-4 whitespace-no-wrap text-right text-sm leading-5 font-medium">
-              <a
-                href="#"
-                class="text-indigo-600 hover:text-indigo-900 focus:outline-none focus:underline"
-              >Edit</a>
-            </td>
-          </tr>
-          <tr class="bg-white">
-            <td class="px-6 py-4 whitespace-no-wrap text-sm leading-5 font-medium text-gray-900">
-              Bernard Lane
-            </td>
-            <td class="px-6 py-4 whitespace-no-wrap text-sm leading-5 text-gray-500">
-              Director, Human Resources
-            </td>
-            <td class="px-6 py-4 whitespace-no-wrap text-sm leading-5 text-gray-500">
-              bernardlane@example.com
-            </td>
-            <td class="px-6 py-4 whitespace-no-wrap text-sm leading-5 text-gray-500">
-              Owner
-            </td>
-            <td class="px-6 py-4 whitespace-no-wrap text-right text-sm leading-5 font-medium">
-              <a
-                href="#"
-                class="text-indigo-600 hover:text-indigo-900 focus:outline-none focus:underline"
-              >Edit</a>
-            </td>
-          </tr>
+          </tr> -->
         </tbody>
       </table>
     </div>
@@ -155,6 +155,24 @@ export default {
         this.errored = true
       })
       .finally(() => this.loading = false)
+  },
+  methods:{
+    addItem(){
+      var my_object = {
+        mail:this.mail,
+        date:this.date,
+        adress:this.adress,
+        company: this.company,
+        fliers: this.fliers
+      };
+      this.rowData.push(my_object)
+
+      this.mail = '';
+      this.date = '';
+      this.adress = '';
+      this.company = '';
+      this.fliers = '';
+    }
   }
   
 }
