@@ -5,16 +5,16 @@
         <thead>
           <tr>
             <th class="px-6 py-3 border-b border-gray-200 bg-gray-50 text-left text-xs leading-4 font-medium text-gray-500 uppercase tracking-wider">
-              Name
+              Origin
             </th>
             <th class="px-6 py-3 border-b border-gray-200 bg-gray-50 text-left text-xs leading-4 font-medium text-gray-500 uppercase tracking-wider">
-              Title
+              Destination
             </th>
             <th class="px-6 py-3 border-b border-gray-200 bg-gray-50 text-left text-xs leading-4 font-medium text-gray-500 uppercase tracking-wider">
-              Email
+              Date
             </th>
             <th class="px-6 py-3 border-b border-gray-200 bg-gray-50 text-left text-xs leading-4 font-medium text-gray-500 uppercase tracking-wider">
-              Role
+              Cost
             </th>
             <th class="px-6 py-3 border-b border-gray-200 bg-gray-50" />
           </tr>
@@ -22,7 +22,7 @@
         <tbody>
           <tr class="bg-white">
             <td class="px-6 py-4 whitespace-no-wrap text-sm leading-5 font-medium text-gray-900">
-              Bernard Lane
+              v-for="flight in info">@{{ info.to_location }}
             </td>
             <td class="px-6 py-4 whitespace-no-wrap text-sm leading-5 text-gray-500">
               Director, Human Resources
@@ -146,7 +146,7 @@ export default {
   },
   mounted () {
     axios
-      .get('https://raw.githubusercontent.com/cnjanssen/tailwind-flights/master/data/3-5-2020_SFO.json')
+      .get('https://raw.githubusercontent.com/cnjanssen/tailwind-flights/master/data/SFO_3-5-2020-flights.json')
       .then(response => {
         this.info = response.data
       })
