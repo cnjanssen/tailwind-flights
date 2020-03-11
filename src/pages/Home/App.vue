@@ -297,6 +297,34 @@
 
 <script>
 
+export default {
+  
+  data () {
+    return {
+      info: null,
+      loading: true,
+      errored: false
+    }
+  },
+  mounted () {
+    axios
+      .get('https://raw.githubusercontent.com/cnjanssen/tailwind-flights/master/data/3-5-2020_SFO.json')
+      .then(response => {
+        this.info = response.data
+      })
+      .catch(error => {
+        console.log(error)
+        this.errored = true
+      })
+      .finally(() => this.loading = false)
+  }
+  
+}
+</script>
+
+<script>
+//axios config
+const axios = require('axios');
 
 // import FixedHeader from 'vue-fixed-header'
 export default {
